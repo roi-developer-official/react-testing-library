@@ -37,5 +37,8 @@ Form elements:
 * LabelText
 * DisplayValue
 
+.skip will skip a test
+.only will run this test
+
 
 
