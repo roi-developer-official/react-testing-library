@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <button style={{ backgroundColor: buttonColor }}>Change to {newButtonColor}</button>
+      <button onClick={()=>setButtonColor(newButtonColor)} style={{ backgroundColor: buttonColor }}>Change to {newButtonColor}</button>
     </div>
   );
 }
