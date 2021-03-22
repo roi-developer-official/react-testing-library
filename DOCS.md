@@ -13,3 +13,29 @@ unit testing functions
 * unit test if
   * conmplex logic difficult to test via functional tests.
   * to many edge cases.
+
+screen query methods
+* get: expect the element to be in the DOM
+* query: expect the element not to be in the DOM
+* find: expect the element to appear async
+[All]
+* (exclude) expect only one match
+* (include) expect more than one match
+
+getBy
+getAllByText
+queryBy
+queryAllByAltText
+
+
+queryType:
+* Role (most preferred)
+* AltText (images)
+* Text (display elements)
+Form elements:
+* PlaceholderText
+* LabelText
+* DisplayValue
+
+
+
