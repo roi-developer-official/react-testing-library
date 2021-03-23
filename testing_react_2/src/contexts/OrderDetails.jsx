@@ -61,8 +61,8 @@ function OrderDetailsProvider(props) {
       const newOptionCount = { ...optionCount };
       const optionTypeMap = optionCount[optionType];
       optionTypeMap.set(itemName, parseInt(newItemCount));
-
       setOptionCount(newOptionCount);
+      
     }
 
     return [{ ...optionCount, totals }, updateItemCount];

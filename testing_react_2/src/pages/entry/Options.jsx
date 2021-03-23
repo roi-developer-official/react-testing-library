@@ -30,7 +30,7 @@ export default function Options({ optionType }) {
       key={item.name}
       name={item.name}
       imagePath={item.imagePath}
-      upadteItemCount={(itemName, newItemCount) =>
+      updateItemCount={(itemName, newItemCount) =>
         updateItemCount(itemName, newItemCount, optionType)
       }
     />

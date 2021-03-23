@@ -1,8 +1,8 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../test_utils/testing_library_utile";
 import Options from "../Options";
 
 test("displays image for each scope from server", async () => {
-  render(<Options optionType="scoops" />);
+  render(<Options optionType="scoops"/>);
 
   const scoopeImages = await screen.findAllByRole("img", { name: /scoop$/i });
   expect(scoopeImages).toHaveLength(2);

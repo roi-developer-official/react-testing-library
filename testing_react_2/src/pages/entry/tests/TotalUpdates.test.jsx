@@ -7,7 +7,7 @@ test("update scoop subtotal when scoops chagne", async () => {
   render(<Options optionType="scoops" />, { wrapper: OrderDetailsProvider });
 
   const scoopeSubTotal = screen.getByText("Scoops total: $", { exact: false });
-  expect(scoopeSubTotal).toHaveText("0.00");
+  expect(scoopeSubTotal).toHaveTextContent("0.00");
 
   const vanillaInput = await screen.findByRole("spinbutton", {
     name: "Vanilla",
@@ -22,4 +22,5 @@ test("update scoop subtotal when scoops chagne", async () => {
   userEvent.clear(chocolateInput);
   userEvent.type(chocolateInput, "2");
   expect(scoopeSubTotal).toHaveTextContent("6.00");
+  
 });
