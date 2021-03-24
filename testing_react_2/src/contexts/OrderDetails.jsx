@@ -26,7 +26,6 @@ function useOrderDetails() {
   if (!context) {
     throw new Error("useOrderDetails must implement OrderDetails context");
   }
-
   return context;
 }
 
