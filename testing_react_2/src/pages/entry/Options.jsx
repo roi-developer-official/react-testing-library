@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import AlertBanner from "../common/AlertBanner";
 import { pricePerItem } from "../../constents";
 import { useOrderDetails } from "../../contexts/OrderDetails";
-
+import { formatCurrency } from '../../utils'
 export default function Options({ optionType }) {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(false);
@@ -37,11 +37,11 @@ export default function Options({ optionType }) {
   ));
 
   if (error) return <AlertBanner />;
-
+  
   return (
     <>
         <h2>{title}</h2>
-        <p>{pricePerItem[optionType]} each</p>
+        <p>{ formatCurrency(pricePerItem[optionType])} each</p>
         <p>{title} total: {orderDetails.totals[optionType]}</p>
       <Row>
         {optionItems}
