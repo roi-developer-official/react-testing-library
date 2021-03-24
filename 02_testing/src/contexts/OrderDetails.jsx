@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useMemo, useEffect } from "react";
 import { pricePerItem } from "../constents";
-import { formatCurrency } from '../utils';
+import { formatCurrency } from '../pages/'
 
 
 function calaulateSubTotal(orderType, optionCounts) {
@@ -22,6 +22,7 @@ function useOrderDetails() {
   }
   return context;
 }
+
 
 function OrderDetailsProvider(props) {
 
@@ -58,7 +59,14 @@ function OrderDetailsProvider(props) {
       
     }
 
-    return [{ ...optionCount, totals }, updateItemCount];
+    function resetorder(){
+      setOptionCount({
+        scoops: new Map(),
+        toppings: new Map()
+      })
+    }
+
+    return [{ ...optionCount, totals }, updateItemCount, resetorder];
   }, [optionCount, totals]);
 
 
