@@ -15,14 +15,13 @@ test.only("handle errors from scoops and topping routes", async () => {
         })
     ]);
 
-    render(<OrderEntry />, { wrapper : OrderDetailsProvider });
+    render(<OrderEntry setOrderPhase={jest.fn()}/>, { wrapper : OrderDetailsProvider });
     await waitFor(async ()=> {
             const alerts = await screen.findAllByRole('alert',
             // {  name :  /An unexpected error occured. Please try again later./i }
             );
         expect(alerts).toHaveLength(2);
     });
-
 });
 
 test('this test wont run',()=>{

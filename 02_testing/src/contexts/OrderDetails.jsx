@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useMemo, useEffect } from "react";
 import { pricePerItem } from "../constents";
-import { formatCurrency } from '../pages/'
+import {formatCurrency} from '../utilities';
 
 
 function calaulateSubTotal(orderType, optionCounts) {
